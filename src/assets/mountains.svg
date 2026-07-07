@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 780" preserveAspectRatio="xMidYMid slice">
+  <defs>
+
+    <!-- Sky: light silver-gray at top → dark navy at bottom -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c0c9d4"/>
+      <stop offset="22%"  stop-color="#8d9bb0"/>
+      <stop offset="52%"  stop-color="#3e5170"/>
+      <stop offset="100%" stop-color="#0a1522"/>
+    </linearGradient>
+
+    <!-- Distant mountain range -->
+    <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#586d8a"/>
+      <stop offset="100%" stop-color="#1a2c48"/>
+    </linearGradient>
+
+    <!-- Mid mountain range -->
+    <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3d5272"/>
+      <stop offset="100%" stop-color="#101e34"/>
+    </linearGradient>
+
+    <!-- Near dunes (main feature) -->
+    <linearGradient id="near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2a3e5c"/>
+      <stop offset="100%" stop-color="#0c1828"/>
+    </linearGradient>
+
+    <!-- Foreground -->
+    <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#14233a"/>
+      <stop offset="100%" stop-color="#050d1a"/>
+    </linearGradient>
+
+    <!-- Soft glow at main peak -->
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#8faabe" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#8faabe" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Softer glow at secondary peak -->
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#7d96b0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7d96b0" stop-opacity="0"/>
+    </radialGradient>
+
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="600" height="780" fill="url(#sky)"/>
+
+  <!-- Far mountain range — faint, distant -->
+  <path fill="url(#far)" opacity="0.48"
+    d="M0,450
+       C50,415 110,385 190,395
+       C260,405 300,362 382,366
+       C452,370 512,398 600,383
+       L600,780 L0,780 Z"/>
+
+  <!-- Mid mountain range -->
+  <path fill="url(#mid)" opacity="0.72"
+    d="M0,512
+       C42,470 96,498 162,454
+       C218,416 258,478 332,449
+       C396,424 456,468 548,446
+       C574,439 592,452 600,458
+       L600,780 L0,780 Z"/>
+
+  <!-- Near dunes — main prominent peak centred around x=250 -->
+  <path fill="url(#near)"
+    d="M0,602
+       C32,568 66,586 102,554
+       C132,528 157,498 188,470
+       C208,452 228,440 252,438
+       C276,436 298,448 322,466
+       C358,492 398,520 462,511
+       C512,504 562,526 600,516
+       L600,780 L0,780 Z"/>
+
+  <!-- Glow at main dune summit -->
+  <ellipse cx="252" cy="453" rx="88" ry="40" fill="url(#glow1)"/>
+
+  <!-- Glow at left secondary peak -->
+  <ellipse cx="138" cy="526" rx="56" ry="26" fill="url(#glow2)"/>
+
+  <!-- Very subtle ridge highlight along the main peak -->
+  <path fill="none" stroke="#7a95b0" stroke-width="1.5" stroke-opacity="0.18"
+    d="M186,478 C208,458 228,443 252,441 C276,439 298,450 322,469"/>
+
+  <!-- Foreground dune — darkest layer -->
+  <path fill="url(#fg)"
+    d="M0,672
+       C66,640 150,662 238,640
+       C318,620 390,648 472,630
+       C526,618 566,634 600,626
+       L600,780 L0,780 Z"/>
+
+  <!-- Bottom near-black fill -->
+  <rect y="742" width="600" height="38" fill="#040b16"/>
+
+</svg>
