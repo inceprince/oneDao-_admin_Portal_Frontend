@@ -15,7 +15,6 @@ function Register() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
- 
   function getErrors() {
     const errs = {};
     if (!email) {
@@ -38,7 +37,7 @@ function Register() {
 
   const errors = getErrors();
 
-  //  error only after field is touched or form submitted
+  // show error only after field is touched or form is submitted
   function showError(field) {
     return (submitted || touched[field]) && errors[field];
   }
@@ -76,130 +75,116 @@ function Register() {
           <div className="col-12 col-md-6 d-flex align-items-center">
             <div className="w-100 px-4 px-lg-5 py-5">
 
-              <h2
-                className="fw-bold mb-2"
-                style={{ fontSize: "28px", color: "#1a1a1a" }}
-              >
+              <h2 className="fw-bold mb-2" style={{ fontSize: "28px", color: "#1a1a1a" }}>
                 Register to Admin Panel
               </h2>
-              <p
-                className="mb-4"
-                style={{ fontSize: "14px", color: "#A7ACC4" }}
-              >
+              <p className="mb-4" style={{ fontSize: "14px", color: "#A7ACC4" }}>
                 Enter your phone number and password below
               </p>
 
               <form onSubmit={handleSubmit} noValidate>
 
-                {/* Email */}
+              
                 <div className="mb-4">
-                  <label
-                    className="fw-bolder text-uppercase text-dark mb-1 register-label"
-                    htmlFor="email"
-                  >
-                    EMAIL ID
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    className={`form-control register-input ${showError("email") ? "is-invalid" : ""}`}
-                    placeholder="Enter your email id"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    onBlur={() => handleBlur("email")}
-                    required
-                    autoComplete="email"
-                  />
-                  {showError("email") && (
-                    <div className="invalid-feedback">{errors.email}</div>
-                  )}
-                </div>
 
-                {/* Password */}
-                <div className="mb-4">
-                  <label
-                    className="fw-bolder text-uppercase text-dark mb-1 register-label"
-                    htmlFor="password"
-                  >
-                    PASSWORD
-                  </label>
-                  <div className="position-relative">
+                  {/* Email */}
+                  <div className="mb-3">
+                    <label className="fw-bold text-uppercase text-dark mb-1 register-label" htmlFor="email">
+                      EMAIL ID
+                    </label>
                     <input
-                      id="password"
-                      type={showPassword ? "text" : "password"}
-                      className={`form-control register-input register-password-input ${showError("password") ? "is-invalid" : ""}`}
-                      placeholder="Enter your password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      onBlur={() => handleBlur("password")}
+                      id="email"
+                      type="email"
+                      className={`form-control register-input ${showError("email") ? "is-invalid" : ""}`}
+                      placeholder="Enter your email id"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      onBlur={() => handleBlur("email")}
                       required
-                      autoComplete="new-password"
+                      autoComplete="email"
                     />
-                    {password.length > 0 && (
-                      <button
-                        type="button"
-                        className="eye-toggle"
-                        onClick={() => setShowPassword(!showPassword)}
-                        aria-label={showPassword ? "Hide password" : "Show password"}
-                      >
-                        <i className={`fa-regular ${showPassword ? "fa-eye-slash" : "fa-eye"}`}></i>
-                      </button>
-                    )}
-                    {showError("password") && (
-                      <div className="invalid-feedback">{errors.password}</div>
+                    {showError("email") && (
+                      <div className="invalid-feedback">{errors.email}</div>
                     )}
                   </div>
-                </div>
 
-                {/* Confirm Password */}
-                <div className="mb-5">
-                  <label
-                    className="fw-bolder text-uppercase text-dark mb-1 register-label"
-                    htmlFor="confirmPassword"
-                  >
-                    CONFIRM PASSWORD
-                  </label>
-                  <div className="position-relative">
-                    <input
-                      id="confirmPassword"
-                      type={showConfirmPassword ? "text" : "password"}
-                      className={`form-control register-input register-password-input ${showError("confirmPassword") ? "is-invalid" : ""}`}
-                      placeholder="Enter your confirm password"
-                      value={confirmPassword}
-                      onChange={(e) => setConfirmPassword(e.target.value)}
-                      onBlur={() => handleBlur("confirmPassword")}
-                      required
-                      autoComplete="new-password"
-                    />
-                    {confirmPassword.length > 0 && (
-                      <button
-                        type="button"
-                        className="eye-toggle"
-                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                        aria-label={showConfirmPassword ? "Hide confirm password" : "Show confirm password"}
-                      >
-                        <i className={`fa-regular ${showConfirmPassword ? "fa-eye-slash" : "fa-eye"}`}></i>
-                      </button>
-                    )}
-                    {showError("confirmPassword") && (
-                      <div className="invalid-feedback">{errors.confirmPassword}</div>
-                    )}
+                  {/* Password */}
+                  <div className="mb-3">
+                    <label className="fw-bold text-uppercase text-dark mb-1 register-label" htmlFor="password">
+                      PASSWORD
+                    </label>
+                    <div className="position-relative">
+                      <input
+                        id="password"
+                        type={showPassword ? "text" : "password"}
+                        className={`form-control register-input register-password-input ${showError("password") ? "is-invalid" : ""}`}
+                        placeholder="Enter your password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        onBlur={() => handleBlur("password")}
+                        required
+                        autoComplete="new-password"
+                      />
+                      {password.length > 0 && (
+                        <button
+                          type="button"
+                          className="eye-toggle"
+                          onClick={() => setShowPassword(!showPassword)}
+                          aria-label={showPassword ? "Hide password" : "Show password"}
+                        >
+                          <i className={`fa-regular ${showPassword ? "fa-eye-slash" : "fa-eye"}`}></i>
+                        </button>
+                      )}
+                      {showError("password") && (
+                        <div className="invalid-feedback">{errors.password}</div>
+                      )}
+                    </div>
                   </div>
+
+                
+                  <div>
+                    <label className="fw-bold text-uppercase text-dark mb-1 register-label" htmlFor="confirmPassword">
+                      CONFIRM PASSWORD
+                    </label>
+                    <div className="position-relative">
+                      <input
+                        id="confirmPassword"
+                        type={showConfirmPassword ? "text" : "password"}
+                        className={`form-control register-input register-password-input ${showError("confirmPassword") ? "is-invalid" : ""}`}
+                        placeholder="Enter your confirm password"
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        onBlur={() => handleBlur("confirmPassword")}
+                        required
+                        autoComplete="new-password"
+                      />
+                      {confirmPassword.length > 0 && (
+                        <button
+                          type="button"
+                          className="eye-toggle"
+                          onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                          aria-label={showConfirmPassword ? "Hide confirm password" : "Show confirm password"}
+                        >
+                          <i className={`fa-regular ${showConfirmPassword ? "fa-eye-slash" : "fa-eye"}`}></i>
+                        </button>
+                      )}
+                      {showError("confirmPassword") && (
+                        <div className="invalid-feedback">{errors.confirmPassword}</div>
+                      )}
+                    </div>
+                  </div>
+
                 </div>
 
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="btn register-btn w-100 py-3"
+                  className="btn register-btn w-100"
                   disabled={!isFormValid() || loading}
                 >
                   {loading ? (
                     <>
-                      <span
-                        className="spinner-border spinner-border-sm me-2"
-                        role="status"
-                        aria-hidden="true"
-                      ></span>
+                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
                       Registering...
                     </>
                   ) : (
