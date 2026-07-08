@@ -35,7 +35,7 @@ h2 {
 /* field labels like EMAIL ID, PASSWORD */
 .register-label {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700 !important;
   color: #222;
   margin-bottom: 8px;
@@ -45,12 +45,12 @@ h2 {
 /* all three input fields */
 .register-input {
   height: 48px;
-  border: 1.5px solid #1a1a1a;
-  border-radius: 12px;
-  font-size: 16px;
+  border: 1.6px solid #222222;
+  border-radius: 8px;
+  font-size: 14px;
   color: #222;
   padding-left: 18px;
-  box-shadow: none !important; /* removes bootstrap's blue glow on focus */
+  box-shadow: none !important; 
   transition: 0.25s ease;
 }
 
@@ -98,32 +98,6 @@ h2 {
   color: #222;
 }
 
-/* register button */
-.register-btn {
-  width: 100%;
-  height: 58px;
-  background: #111111;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.register-btn:hover:not(:disabled) {
-  background: #000;
-  color: white;
-}
-
-/* gray button when form is not valid yet */
-.register-btn:disabled {
-  background: #8b8b8b !important;
-  color: white !important;
-  cursor: not-allowed;
-  opacity: 1;
-  pointer-events: none;
-}
 
 /* bootstrap hides invalid-feedback by default - this forces it to show */
 .invalid-feedback {

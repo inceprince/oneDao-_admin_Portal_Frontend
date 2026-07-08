@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import mountainsImg from "../assets/piccii.png";
+import PrimaryButton from "../components/PrimaryButton";
 import "./Register.css";
 
 function Register() {
@@ -89,7 +90,7 @@ function Register() {
 
                   {/* Email */}
                   <div className="mb-3">
-                    <label className="fw-bold text-uppercase text-dark mb-1 register-label" htmlFor="email">
+                    <label className="fw-bolder text-uppercase text-dark mb-1 register-label" htmlFor="email">
                       EMAIL ID
                     </label>
                     <input
@@ -110,7 +111,7 @@ function Register() {
 
                   {/* Password */}
                   <div className="mb-3">
-                    <label className="fw-bold text-uppercase text-dark mb-1 register-label" htmlFor="password">
+                    <label className="fw-bolder text-uppercase text-dark mb-1 register-label" htmlFor="password">
                       PASSWORD
                     </label>
                     <div className="position-relative">
@@ -143,7 +144,7 @@ function Register() {
 
                 
                   <div>
-                    <label className="fw-bold text-uppercase text-dark mb-1 register-label" htmlFor="confirmPassword">
+                    <label className="fw-bolder text-uppercase text-dark mb-1 register-label" htmlFor="confirmPassword">
                       CONFIRM PASSWORD
                     </label>
                     <div className="position-relative">
@@ -177,20 +178,13 @@ function Register() {
                 </div>
 
                 {/* Submit */}
-                <button
-                  type="submit"
-                  className="btn register-btn w-100"
-                  disabled={!isFormValid() || loading}
+                <PrimaryButton
+                  disabled={!isFormValid()}
+                  loading={loading}
+                  loadingText="Registering..."
                 >
-                  {loading ? (
-                    <>
-                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                      Registering...
-                    </>
-                  ) : (
-                    "Register"
-                  )}
-                </button>
+                  Register
+                </PrimaryButton>
 
               </form>
 

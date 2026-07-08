@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import mountainsImg from "../assets/piccii.png";
+import PrimaryButton from "../components/PrimaryButton";
 import "./Otp.css";
 
 function Otp() {
@@ -84,13 +85,9 @@ function Otp() {
                   ))}
                 </div>
 
-                <button
-                  type="submit"
-                  className="otp-btn w-100"
-                  disabled={!isComplete}
-                >
+                <PrimaryButton disabled={!isComplete}>
                   Proceed
-                </button>
+                </PrimaryButton>
               </form>
 
             </div>
