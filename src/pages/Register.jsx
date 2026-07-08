@@ -75,7 +75,7 @@ function Register() {
           <div className="col-12 col-md-6 d-flex align-items-center">
             <div className="w-100 px-4 px-lg-5 py-5">
 
-              <h2 className="fw-bold mb-2" style={{ fontSize: "28px", color: "#1a1a1a" }}>
+              <h2 className="fw-bold mb-2" style={{ fontSize: "24px", color: "#1a1a1a" }}>
                 Register to Admin Panel
               </h2>
               <p className="mb-4" style={{ fontSize: "14px", color: "#A7ACC4" }}>
