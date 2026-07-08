@@ -41,27 +41,6 @@ body {
   border-color: #101010;
 }
 
-.otp-btn {
-  height: 58px;
-  background: #111111;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.otp-btn:hover:not(:disabled) {
-  background: #000;
-}
-
-.otp-btn:disabled {
-  background: #8b8b8b;
-  cursor: not-allowed;
-  opacity: 1;
-}
 
 @media (max-width: 991px) {
   .otp-card {

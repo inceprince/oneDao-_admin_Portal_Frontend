@@ -1,0 +1,23 @@
+.primary-btn {
+  height: 58px;
+  background: #111111;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.primary-btn:hover:not(:disabled) {
+  background: #000;
+  color: white;
+}
+
+.primary-btn:disabled {
+  background: #8b8b8b;
+  color: white;
+  cursor: not-allowed;
+  opacity: 1;
+}
