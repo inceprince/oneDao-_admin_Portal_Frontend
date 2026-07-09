@@ -1,0 +1,38 @@
+export const ordersData = [
+  { id: 1, user: { name: "Sierra Ferguson", phone: "+998 (99) 436-46-15", avatar: "https://i.pravatar.cc/40?img=20" }, carComfort: "Simple", date: "04.12.2021 20:30", start: "Furkat Street, Tashkent", end: "Beш Агач Plaza, Tashkent", status: "Completed", income: "50 300 000 SUM" },
+  { id: 2, user: { name: "James Carter", phone: "+998 (99) 158-10-15", avatar: "https://i.pravatar.cc/40?img=21" }, carComfort: "Business", date: "04.12.2021 20:24", start: "Hamidulla Oripov St, Tashkent", end: "Yunusabad, Tashkent", status: "Completed", income: "300 000 SUM" },
+  { id: 3, user: { name: "Aisha Karimova", phone: "+998 (90) 321-11-22", avatar: "https://i.pravatar.cc/40?img=47" }, carComfort: "Convenient", date: "04.12.2021 20:23", start: "Farg'ona Yo'li, Tashkent", end: "Chilonzor Metro, Tashkent", status: "In Progress", income: "5 300 000 SUM" },
+  { id: 4, user: { name: "Marcus Webb", phone: "+998 (91) 555-77-88", avatar: "https://i.pravatar.cc/40?img=53" }, carComfort: "Convenient", date: "17.11.2021 12:19", start: "Kumarik St, Tashkent", end: "Airport Terminal 2, Tashkent", status: "Cancelled", income: "500 000 SUM" },
+  { id: 5, user: { name: "Nora Petersen", phone: "+998 (93) 212-44-00", avatar: "https://i.pravatar.cc/40?img=44" }, carComfort: "Simple", date: "04.12.2021 20:30", start: "Kuyi Talarik St, Tashkent", end: "Mirzo Ulugbek, Tashkent", status: "Completed", income: "50 300 000 SUM" },
+  { id: 6, user: { name: "David Okonkwo", phone: "+998 (97) 611-33-55", avatar: "https://i.pravatar.cc/40?img=60" }, carComfort: "Business", date: "05.12.2021 09:15", start: "Amir Temur Ave, Tashkent", end: "Samarkand Darvoза, Tashkent", status: "Completed", income: "1 200 000 SUM" },
+  { id: 7, user: { name: "Lena Hoffmann", phone: "+998 (99) 780-22-11", avatar: "https://i.pravatar.cc/40?img=49" }, carComfort: "Convenient", date: "05.12.2021 11:40", start: "Navoi Street, Tashkent", end: "Shayхontohur, Tashkent", status: "In Progress", income: "8 750 000 SUM" },
+  { id: 8, user: { name: "Omar Al-Rashid", phone: "+998 (90) 144-66-99", avatar: "https://i.pravatar.cc/40?img=57" }, carComfort: "Simple", date: "06.12.2021 14:05", start: "Mustaqillik Square, Tashkent", end: "Olmazor District, Tashkent", status: "Cancelled", income: "2 100 000 SUM" },
+  { id: 9, user: { name: "Priya Sharma", phone: "+998 (93) 999-00-77", avatar: "https://i.pravatar.cc/40?img=45" }, carComfort: "Business", date: "06.12.2021 16:50", start: "Bunyodkor Ave, Tashkent", end: "Sergeli District, Tashkent", status: "Completed", income: "15 600 000 SUM" },
+  { id: 10, user: { name: "Alexei Volkov", phone: "+998 (91) 303-88-12", avatar: "https://i.pravatar.cc/40?img=52" }, carComfort: "Convenient", date: "07.12.2021 08:20", start: "Eski Shahar, Tashkent", end: "Tashkent Intl University", status: "Completed", income: "3 400 000 SUM" },
+];
+
+export const ridesData = [
+  { id: 1, driver: { name: "Maharrm Hasanli", phone: "+998 (99) 436-46-15", avatar: "https://i.pravatar.cc/40?img=1" }, client: "Sierra Ferguson", date: "04.12.2021 20:30", distance: "5.2 km", duration: "18 min", status: "Completed", amount: "50 300 SUM" },
+  { id: 2, driver: { name: "Gina Garza", phone: "+998 (99) 158-10-15", avatar: "https://i.pravatar.cc/40?img=5" }, client: "James Carter", date: "04.12.2021 20:24", distance: "3.1 km", duration: "11 min", status: "Completed", amount: "30 000 SUM" },
+  { id: 3, driver: { name: "Brian Reed", phone: "+998 (35) 489-46-20", avatar: "https://i.pravatar.cc/40?img=3" }, client: "Aisha Karimova", date: "04.12.2021 20:23", distance: "7.8 km", duration: "25 min", status: "In Progress", amount: "53 000 SUM" },
+  { id: 4, driver: { name: "Tammy Spencer", phone: "+998 (95) 785-10-02", avatar: "https://i.pravatar.cc/40?img=9" }, client: "Marcus Webb", date: "17.11.2021 12:19", distance: "12.4 km", duration: "38 min", status: "Cancelled", amount: "50 000 SUM" },
+  { id: 5, driver: { name: "Joseph Brooks", phone: "+998 (99) 436-46-15", avatar: "https://i.pravatar.cc/40?img=7" }, client: "Nora Petersen", date: "04.12.2021 20:30", distance: "4.5 km", duration: "15 min", status: "Completed", amount: "50 300 SUM" },
+  { id: 6, driver: { name: "Juan Steward", phone: "+998 (99) 436-46-15", avatar: "https://i.pravatar.cc/40?img=11" }, client: "David Okonkwo", date: "05.12.2021 09:15", distance: "9.2 km", duration: "30 min", status: "Completed", amount: "12 000 SUM" },
+  { id: 7, driver: { name: "Maharrm Hasanli", phone: "+998 (99) 436-46-15", avatar: "https://i.pravatar.cc/40?img=1" }, client: "Lena Hoffmann", date: "05.12.2021 11:40", distance: "6.7 km", duration: "22 min", status: "In Progress", amount: "87 500 SUM" },
+  { id: 8, driver: { name: "Gina Garza", phone: "+998 (99) 158-10-15", avatar: "https://i.pravatar.cc/40?img=5" }, client: "Omar Al-Rashid", date: "06.12.2021 14:05", distance: "2.9 km", duration: "10 min", status: "Completed", amount: "21 000 SUM" },
+  { id: 9, driver: { name: "Brian Reed", phone: "+998 (35) 489-46-20", avatar: "https://i.pravatar.cc/40?img=3" }, client: "Priya Sharma", date: "06.12.2021 16:50", distance: "15.3 km", duration: "45 min", status: "Completed", amount: "156 000 SUM" },
+  { id: 10, driver: { name: "Tammy Spencer", phone: "+998 (95) 785-10-02", avatar: "https://i.pravatar.cc/40?img=9" }, client: "Alexei Volkov", date: "07.12.2021 08:20", distance: "8.1 km", duration: "27 min", status: "Cancelled", amount: "34 000 SUM" },
+];
+
+export const clientsData = [
+  { id: 1, name: "Sierra Ferguson", phone: "+998 (99) 436-46-15", avatar: "https://i.pravatar.cc/40?img=20", email: "sierra.f@mail.com", totalRides: 24, totalSpent: "1 200 000 SUM", status: "Active", joined: "01.01.2021" },
+  { id: 2, name: "James Carter", phone: "+998 (99) 158-10-15", avatar: "https://i.pravatar.cc/40?img=21", email: "j.carter@mail.com", totalRides: 12, totalSpent: "540 000 SUM", status: "Active", joined: "15.03.2021" },
+  { id: 3, name: "Aisha Karimova", phone: "+998 (90) 321-11-22", avatar: "https://i.pravatar.cc/40?img=47", email: "aisha.k@mail.com", totalRides: 8, totalSpent: "320 000 SUM", status: "Inactive", joined: "22.05.2021" },
+  { id: 4, name: "Marcus Webb", phone: "+998 (91) 555-77-88", avatar: "https://i.pravatar.cc/40?img=53", email: "m.webb@mail.com", totalRides: 35, totalSpent: "2 800 000 SUM", status: "Active", joined: "10.02.2021" },
+  { id: 5, name: "Nora Petersen", phone: "+998 (93) 212-44-00", avatar: "https://i.pravatar.cc/40?img=44", email: "nora.p@mail.com", totalRides: 5, totalSpent: "180 000 SUM", status: "Active", joined: "07.08.2021" },
+  { id: 6, name: "David Okonkwo", phone: "+998 (97) 611-33-55", avatar: "https://i.pravatar.cc/40?img=60", email: "d.okonkwo@mail.com", totalRides: 19, totalSpent: "950 000 SUM", status: "Active", joined: "30.04.2021" },
+  { id: 7, name: "Lena Hoffmann", phone: "+998 (99) 780-22-11", avatar: "https://i.pravatar.cc/40?img=49", email: "lena.h@mail.com", totalRides: 41, totalSpent: "3 600 000 SUM", status: "Active", joined: "18.01.2021" },
+  { id: 8, name: "Omar Al-Rashid", phone: "+998 (90) 144-66-99", avatar: "https://i.pravatar.cc/40?img=57", email: "omar.ar@mail.com", totalRides: 3, totalSpent: "90 000 SUM", status: "Inactive", joined: "11.09.2021" },
+  { id: 9, name: "Priya Sharma", phone: "+998 (93) 999-00-77", avatar: "https://i.pravatar.cc/40?img=45", email: "priya.s@mail.com", totalRides: 27, totalSpent: "1 890 000 SUM", status: "Active", joined: "25.06.2021" },
+  { id: 10, name: "Alexei Volkov", phone: "+998 (91) 303-88-12", avatar: "https://i.pravatar.cc/40?img=52", email: "a.volkov@mail.com", totalRides: 16, totalSpent: "720 000 SUM", status: "Active", joined: "03.07.2021" },
+];

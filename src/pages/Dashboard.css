@@ -1,0 +1,165 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #1a1a2e;
+}
+
+.dashboard-main {
+  flex: 1;
+  background: #F5F6FA;
+  border-radius: 24px 0 0 24px;
+  margin: 12px 12px 12px 0;
+  padding: 24px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* Top bar */
+.dashboard-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 20px;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-hamburger {
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+}
+
+.topbar-greeting {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.topbar-greeting em {
+  font-style: italic;
+}
+
+.topbar-message {
+  font-size: 13px;
+  color: #A7ACC4;
+}
+
+.topbar-highlight {
+  color: #4880FF;
+  font-weight: 600;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-icon {
+  font-size: 20px;
+  color: #555;
+  cursor: pointer;
+  background: #F5F6FA;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.topbar-logout-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #1a1a2e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.topbar-logout-icon:hover {
+  background: #e53935;
+}
+
+/* KB + Chart on left, Top Drivers on right */
+.dashboard-row {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.dashboard-left-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Tablet (≤1024px) ── */
+@media (max-width: 1024px) {
+  .topbar-greeting {
+    font-size: 17px;
+  }
+}
+
+/* ── Mobile (≤768px) ── */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    background: #F5F6FA;
+  }
+
+  .dashboard-main {
+    margin: 0;
+    border-radius: 0;
+    padding: 16px 16px 32px;
+  }
+
+  .dashboard-topbar {
+    padding: 12px 14px;
+  }
+
+  .topbar-greeting {
+    font-size: 15px;
+  }
+
+  .topbar-message {
+    display: none;
+  }
+
+  .topbar-hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .dashboard-row {
+    flex-direction: column;
+  }
+
+  .dashboard-left-col {
+    width: 100%;
+  }
+}
+
+/* ── Small mobile (≤480px) ── */
+@media (max-width: 480px) {
+  .topbar-greeting {
+    font-size: 13px;
+  }
+
+  .topbar-icon {
+    display: none;
+  }
+}
