@@ -1,0 +1,86 @@
+.kb-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.kb-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.kb-cards {
+  display: flex;
+  gap: 12px;
+}
+
+.kb-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  min-width: 0;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.kb-card:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.kb-card-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 17px;
+}
+
+.kb-card-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kb-card-arrow {
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+/* Mobile: horizontal scroll */
+@media (max-width: 768px) {
+  .kb-cards {
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .kb-cards::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .kb-cards::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 4px;
+  }
+
+  .kb-card {
+    min-width: 140px;
+    flex: 0 0 auto;
+    padding: 12px 12px;
+  }
+
+  .kb-title {
+    font-size: 16px;
+  }
+}
